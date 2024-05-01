@@ -138,9 +138,9 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #gift .gift-swiper .swiper-wrapper .swiper-slide .g-more{display: block; width: 130px; border: 1px solid #222; font-family: "Raleway", sans-serif; font-size: 15px; text-align: center; margin: 0 0 50px 50px; padding: 6px 0;}
 
 /*페이지네이션 바 수정*/
-.swiper-pagination-progressbar-fill{background-color: #871E25;}
+#gift .swiper-pagination-progressbar-fill{background-color: #871E25;}
 
-.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{position: absolute; left: 50px; width: 110px;}
+.swiper-horizontal>.swiper-pagination-progressbar, .swiper-pagination-progressbar.swiper-pagination-horizontal, .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite, .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{position: absolute; top: 120px; left: 50px; width: 110px;}
 
 .swiper-pagination-progressbar{background-color: rgba(135, 30, 37, 0.3)}
 
