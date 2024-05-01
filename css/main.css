@@ -260,4 +260,6 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
   #series .m-copy{font-size: 150px; top: 130px; right: 50px;}
   #series .s-copy{font-size: 150px; bottom: -15px; left: 50px;}
   
+
+#gift .gift-swiper img{height: 820px;}
 }
