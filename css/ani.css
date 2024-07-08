@@ -5,11 +5,20 @@
   100%{transform: rotate(45deg);}
 }
 
-@keyframes bannermove {
+@keyframes banner-ani-left {
   0% {
-      transform: translate(0, 0);
+    transform: translateX(0);
   }
   100% {
-      transform: translate(-50%, 0);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes banner-ani-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }

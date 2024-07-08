@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 #wrap{min-width: 320px;}
+#main, #prologue, #story, #shop, #series, #gift{width: 100%; height: 100vh;}
 
-header{width: 100%; position: fixed; z-index: 999;}
+header{width: 100%; position: fixed; z-index: 99;}
 header h1{width: 132px; position: absolute; top: 35px; left: 50%; transform: translateX(-50%); z-index: 99;}
 header h1 img{width: 100%;}
 
@@ -46,11 +47,10 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #main, #prologue, #story, #shop, #series, #gift{width: 100%; height: 100%; position: absolute; left: 0;}
 
 /*main*/
-#main{top: 0;}
+
 #main video{width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;}
 
 /*prologue*/
-#prologue{top: 100%;}
 #prologue .p-img{width: 100%; height: 100%; background: url(../img/mimidar_우산.png) no-repeat center / cover;}
 
 #prologue .p-txt{text-align: center; color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
@@ -59,25 +59,27 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #prologue .p-txt span{font-size: 18px;}
 
 /*story*/
-#story{top: 200%; overflow: hidden;}
 #story .s-main{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
 #story .s-main img{width: 140px; margin-bottom: 40px;}
 #story .s-main h2{font-size: 25px; margin-bottom: 20px;}
 #story .s-main p{font-size: 18px; margin-bottom: 40px;}
-#story .s-main .s-more{font-family: "Raleway", sans-serif; width: 150px; height: 45px; border: 1px solid #222; border-radius: 30px; padding: 10px 20px;}
-#story .s-main .s-more a{font-size: 15px; display: block;}
+#story .s-main .s-more a{font-size: 15px; font-family: "Raleway", sans-serif; width: 150px; height: 45px; border: 1px solid #222; border-radius: 30px; padding: 11px 20px; position: absolute; left: 50%; transform: translateX(-50%);}
+#story .s-main .s-more:hover a{background-color: #222; color: #fff;}
 
-#story .flow-wrap .img-left{position: absolute; top: 0; left: 0;}
-#story .flow-wrap .img-left ul{display: flex;}
 
-#story .flow-wrap .img-right{position: absolute; bottom: 0; right: 0;}
+#story .flow-wrap .img-left{position: absolute; top: 0; left: 0; animation: banner-ani-left 20s linear infinite;}
+#story .flow-wrap .img-left ul{display: flex; overflow: hidden;}
+#story .flow-wrap .img-left{transition: all 0.5s;}
+
+#story .flow-wrap .img-right{position: absolute; bottom: 0; right: 0; animation: banner-ani-right 20s linear infinite;}
 #story .flow-wrap .img-right ul{display: flex; justify-content: right;}
 
-#story .flow-wrap ul li{margin-right: 30px;}
+#story .flow-wrap .img-left ul li{margin-right: 30px;}
+#story .flow-wrap .img-right ul li{margin-left: 30px;}
 #story .flow-wrap ul li img{width: 176px; height: 160px; object-fit: cover;}
 
+
 /*shop*/
-#shop{top: 300%;}
 #shop .inner{padding-top: 140px; font-family: "Brawler", "Gowun Batang", serif;}
 #shop .shop-txt{padding-left: 50px;}
 #shop .shop-txt h2{font-size: 42px; width: 225px; margin-bottom: 24px;}
@@ -100,24 +102,25 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #shop .swiper .swiper-button-prev::after{display: none;}
 #shop .swiper .swiper-button-next::after{display: none;}
 
+
 /*series*/
-#series{top: 400%;}
 #series .inner{padding: 100px 20px 0; font-family: "Brawler", "Gowun Batang", serif; position: relative;}
 #series .ser-txt h2{font-size: 42px; width: 225px;}
 
 #series .ser-txt .ser-tbox{display: flex; margin: 20px 0;}
 #series .ser-txt .ser-tbox div{width: 2px; height: 50px; background-color: #8b8b8b; margin-right: 20px;}
-#series .ser-txt .ser-tbox p{width: 235px; font-size: 17px; color: #8b8b8b; font-weight: normal; padding-top: 10px;}
+#series .ser-txt .ser-tbox p{width: 235px; font-size: 18px; color: #8b8b8b; font-weight: normal; padding-top: 10px;}
 
 
 #series .content-wrap{display: flex; flex-wrap: wrap; justify-content: space-between;}
-#series .content-wrap > div{width: calc((100% - 10px) / 2); height: 192px; position: relative; margin-bottom: 10px;}
+#series .content-wrap > div{width: calc((100% - 10px) / 2); height: 200px; position: relative; margin-bottom: 10px;}
 #series .content-wrap > div img{width: 100%; height: 100%; object-fit: cover;}
 
 #series .content-wrap .series-wrap{position: absolute; bottom: 0; right: 0; opacity: 0.9; width: 110px; height: 65px; text-align: center;}
 #series .content-wrap .series-wrap .c-txt{color: #fff; padding-top: 9px;}
 #series .content-wrap .series-wrap .c-txt h4{font-size: 15px;}
 #series .content-wrap .series-wrap .c-txt .c-more{width: 80px; border: 1px solid #fff; font-family: "Raleway", sans-serif; font-size: 11px; padding: 4px 6px;}
+#series .content-wrap .series-wrap .c-txt:hover .c-more{background-color: #fff; color: #222; font-weight: bold;}
 
 #series .content-wrap .series-wrap.c-box1{background-color: #B0A089;}
 #series .content-wrap .series-wrap.c-box2{background-color: #A3B6BD;}
@@ -127,15 +130,16 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #series .content-wrap .series-wrap.c-box6{background-color: #814641;}
 
 #series .m-copy{font-family: "Monsieur La Doulaise", cursive; font-size: 60px; opacity: 15%; z-index: 10; position: absolute; top: 260px; right: 20px;}
-#series .s-copy{font-family: "Monsieur La Doulaise", cursive; font-size: 60px; opacity: 15%; z-index: 10; position: absolute; bottom: 0; left: 20px;}
+#series .s-copy{font-family: "Monsieur La Doulaise", cursive; font-size: 60px; opacity: 15%; z-index: 10; position: absolute; bottom: -20px; left: 20px;}
 
 
-#gift{top: 500%;}
 #gift .inner{padding-top: 120px; font-family: "Brawler", "Gowun Batang", serif; position: relative;}
 #gift .g-wrap h2{font-size: 42px; width: 220px; margin-bottom: 42px; padding-left: 50px;}
 #gift .gift-swiper img{width: 100%; height: 300px; object-fit: cover;}
 #gift .gift-swiper .swiper-wrapper .swiper-slide p{padding-left: 50px; font-size: 26px; font-weight: bold; margin-bottom: 35px;}
-#gift .gift-swiper .swiper-wrapper .swiper-slide .g-more{display: block; width: 130px; border: 1px solid #222; font-family: "Raleway", sans-serif; font-size: 15px; text-align: center; margin: 0 0 50px 50px; padding: 6px 0;}
+#gift .gift-swiper .swiper-wrapper .swiper-slide .g-more{display: block; width: 130px; border: 1px solid #222; font-family: "Raleway", sans-serif; font-size: 15px; text-align: center; margin: 0 0 50px 225px; padding: 6px 0;}
+
+
 
 /*페이지네이션 바 수정*/
 #gift .swiper-pagination-progressbar-fill{background-color: #871E25;}
@@ -144,9 +148,14 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 
 .swiper-pagination-progressbar{background-color: rgba(135, 30, 37, 0.3)}
 
+.swiper-button-next{background: url(../img/icon_next_m.png) no-repeat top right / cover; width: 69px; height: 30px;}
+.swiper-button-prev{background: url(../img/icon_prev_m.png) no-repeat top left / cover; width: 62px; height: 30px;}
+.swiper-button-next:after, .swiper-button-prev:after{display: none;}
 
 
-@media screen and (min-width: 700px) {
+
+
+@media screen and (min-width: 1024px) {
   header h1{width: 177px;}
   .q-menu .lang{display: flex;}
   .q-menu .lang a{font-size: 16px; margin-right: 10px; padding-right: 10px; border-right: 1px solid #fff; line-height: 0.9;}
@@ -165,7 +174,9 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
   #story .s-main .s-more{font-family: "Raleway", sans-serif; width: 200px; height: 60px;}
   #story .s-main .s-more a{font-size: 20px;}
 
-  #story .flow-wrap ul li img{width: auto; height: 320px; object-fit: cover;}
+  #story .flow-wrap ul li img{width: 350px; height: 320px; object-fit: cover;}
+  #story .s-main .s-more a{font-size: 20px; width: 200px; height: 60px; padding: 17px 20px;}
+  
 
   /*shop*/
   #shop .inner{padding-top: 200px;}
@@ -203,7 +214,15 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
   #series .m-copy{font-size: 130px; top: 210px; right: 25px;}
   #series .s-copy{font-size: 130px; bottom: -5px; left: 50px;}
   
+
+
+  /*gift*/
+  #gift .gift-swiper img{width: 100%; height: 695px; object-fit: cover;}
 }
+
+
+
+
 
 
 @media screen and (min-width: 1200px) {
@@ -268,5 +287,6 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
   #series .s-copy{font-size: 150px; bottom: -15px; left: 50px;}
   
 
-#gift .gift-swiper img{height: 820px;}
+  #gift .gift-swiper .swiper-wrapper .swiper-slide .g-img img{width: 1200px; height: 800px;}
+  #gift .gift-swiper .swiper-wrapper .swiper-slide .g-img{position: absolute; bottom: 0; right: 0;}
 }
