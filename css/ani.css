@@ -5,6 +5,7 @@
   100%{transform: rotate(45deg);}
 }
 
+
 @keyframes banner-ani-left {
   0% {
     transform: translateX(0);

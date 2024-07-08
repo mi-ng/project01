@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 #wrap{min-width: 320px;}
-#main, #prologue, #story, #shop, #series, #gift{width: 100%; height: 100vh;}
+#main, #prologue, #story, #shop, #series, #gift{
+  width: 100%; height: 100vh;
+}
 
 header{width: 100%; position: fixed; z-index: 99;}
 header h1{width: 132px; position: absolute; top: 35px; left: 50%; transform: translateX(-50%); z-index: 99;}
