@@ -1,13 +1,36 @@
 @charset "utf-8";
 
-#wrap{min-width: 320px;}
+#wrap{
+  min-width: 320px;
+}
 
-header{width: 100%; position: fixed; z-index: 999;}
-header h1{width: 132px; position: absolute; top: 35px; left: 50%; transform: translateX(-50%); z-index: 99;}
-header h1 img{width: 100%;}
+header{
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+}
+header h1{
+  width: 132px;
+  position: absolute;
+  top: 35px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+header h1 img{
+  width: 100%;
+}
 
-.q-menu{position: relative; font-family: "Raleway", sans-serif;}
-.q-menu .lang{position: absolute; top: 41px; right: 63px;}
+.q-menu{
+  position: relative;
+  font-family: "Raleway", sans-serif;
+}
+
+.q-menu .lang{
+  position: absolute;
+  top: 41px;
+  right: 63px;
+}
 .q-menu .lang a{display: block; color: #fff; font-size: 14px; font-weight: bold;}
 .q-menu .lang a.eng{opacity: 0.7; font-weight: normal;}
 .q-menu .lang a.eng:hover{opacity: 1;}
@@ -43,14 +66,13 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 .search-close::after{content: ""; display: block; width: 100%; height: 1px; background-color: #fff; transform: rotate(-45deg);}
 
 
-#main, #prologue, #story, #shop, #series, #gift{width: 100%; height: 100%; position: absolute; left: 0;}
+#container{width: 100%; height: 100vh;}
 
 /*main*/
-#main{top: 0;}
+
 #main video{width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;}
 
 /*prologue*/
-#prologue{top: 100%;}
 #prologue .p-img{width: 100%; height: 100%; background: url(../img/mimidar_우산.png) no-repeat center / cover;}
 
 #prologue .p-txt{text-align: center; color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
@@ -59,7 +81,6 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #prologue .p-txt span{font-size: 18px;}
 
 /*story*/
-#story{top: 200%; overflow: hidden;}
 #story .s-main{width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
 #story .s-main img{width: 140px; margin-bottom: 40px;}
 #story .s-main h2{font-size: 25px; margin-bottom: 20px;}
@@ -70,9 +91,10 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 
 #story .flow-wrap .img-left{position: absolute; top: 0; left: 0; animation: banner-ani-left 20s linear infinite;}
 #story .flow-wrap .img-left ul{display: flex; overflow: hidden;}
+#story .flow-wrap .img-left{transition: all 0.5s;}
 
 #story .flow-wrap .img-right{position: absolute; bottom: 0; right: 0; animation: banner-ani-right 20s linear infinite;}
-#story .flow-wrap .img-right ul{display: flex; overflow: hidden;}
+#story .flow-wrap .img-right ul{display: flex; justify-content: right;}
 
 #story .flow-wrap .img-left ul li{margin-right: 30px;}
 #story .flow-wrap .img-right ul li{margin-left: 30px;}
@@ -80,7 +102,6 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 
 
 /*shop*/
-#shop{top: 300%;}
 #shop .inner{padding-top: 140px; font-family: "Brawler", "Gowun Batang", serif;}
 #shop .shop-txt{padding-left: 50px;}
 #shop .shop-txt h2{font-size: 42px; width: 225px; margin-bottom: 24px;}
@@ -105,7 +126,6 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 
 
 /*series*/
-#series{top: 400%;}
 #series .inner{padding: 100px 20px 0; font-family: "Brawler", "Gowun Batang", serif; position: relative;}
 #series .ser-txt h2{font-size: 42px; width: 225px;}
 
@@ -135,13 +155,12 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #series .s-copy{font-family: "Monsieur La Doulaise", cursive; font-size: 60px; opacity: 15%; z-index: 10; position: absolute; bottom: -20px; left: 20px;}
 
 
-#gift{top: 500%;}
 #gift .inner{padding-top: 120px; font-family: "Brawler", "Gowun Batang", serif; position: relative;}
 #gift .g-wrap h2{font-size: 42px; width: 220px; margin-bottom: 42px; padding-left: 50px;}
 #gift .gift-swiper img{width: 100%; height: 300px; object-fit: cover;}
 #gift .gift-swiper .swiper-wrapper .swiper-slide p{padding-left: 50px; font-size: 26px; font-weight: bold; margin-bottom: 35px;}
 #gift .gift-swiper .swiper-wrapper .swiper-slide .g-more{display: block; width: 130px; border: 1px solid #222; font-family: "Raleway", sans-serif; font-size: 15px; text-align: center; margin: 0 0 50px 225px; padding: 6px 0;}
-#gift .gift-swiper .swiper-wrapper .swiper-slide .g-more:hover{background-color: #222; color: #fff;}
+
 
 
 /*페이지네이션 바 수정*/
@@ -155,18 +174,7 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 .swiper-button-prev{background: url(../img/icon_prev_m.png) no-repeat top left / cover; width: 62px; height: 30px;}
 .swiper-button-next:after, .swiper-button-prev:after{display: none;}
 
-#gift .swiper-button-next, #gift .swiper-button-prev{margin-top: 80px;}
-#shop .swiper-button-next, #shop .swiper-button-prev{margin-top: -80px;}
 
-footer{top: 600%;height: 650px; position: absolute; left: 0; background-color: #d9d9d9; font-family: 'Notosans KR', sans-serif;}
-
-footer h2{width: 124px; height: 100px; padding-top: 35px;}
-footer h2 img{width: 100%;}
-footer p{font-size: 16px; font-weight: bold;}
-footer span{font-size: 14px; color: #828282;}
-footer .f-wrap{padding: 50px 0 20px;}
-.com-info .sub-txt02{display: block;}
-.sub-txt .block{display: block;}
 
 
 @media screen and (min-width: 1024px) {
@@ -260,11 +268,6 @@ footer .f-wrap{padding: 50px 0 20px;}
   #story .flow-wrap ul li{margin-bottom: 50px; margin-right: 0;}
   #story .flow-wrap ul li img{width: 400px; height: auto; object-fit: cover;}
 
-  #story .flow-wrap .img-left{animation: banner-ani-up 40s linear infinite;}
-  #story .flow-wrap .img-right{animation: banner-ani-up 20s linear infinite;}
-
-
-
   /*shop*/
   #shop .inner{padding: 130px 40px 0;}
   #shop .shop-txt{padding: 0;}
@@ -308,6 +311,4 @@ footer .f-wrap{padding: 50px 0 20px;}
 
   #gift .gift-swiper .swiper-wrapper .swiper-slide .g-img img{width: 1200px; height: 800px;}
   #gift .gift-swiper .swiper-wrapper .swiper-slide .g-img{position: absolute; bottom: 0; right: 0;}
-
-
 }

@@ -23,3 +23,21 @@
     transform: translateX(100%);
   }
 }
+
+@keyframes banner-ani-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes banner-ani-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
