@@ -158,15 +158,31 @@ nav{width: 100%; position: absolute; top: 0; left: 0;}
 #gift .swiper-button-next, #gift .swiper-button-prev{margin-top: 80px;}
 #shop .swiper-button-next, #shop .swiper-button-prev{margin-top: -80px;}
 
-footer{top: 600%;height: 650px; position: absolute; left: 0; background-color: #d9d9d9; font-family: 'Notosans KR', sans-serif;}
+footer{background-color: #d9d9d9; top: 600%; width: 100%; position: absolute; left: 0; font-family: 'Notosans KR', sans-serif;}
+footer .inner{width: 100%; padding: 35px 20px 0;}
 
-footer h2{width: 124px; height: 100px; padding-top: 35px;}
+footer h2{width: 124px; height: 100px;}
 footer h2 img{width: 100%;}
-footer p{font-size: 16px; font-weight: bold;}
-footer span{font-size: 14px; color: #828282;}
-footer .f-wrap{padding: 50px 0 20px;}
+footer .txt-bold{font-size: 16px; font-weight: bold; margin-bottom: 5px; color: #222;}
+footer span, footer p{font-size: 12px; color: #828282;}
+footer .f-wrap{padding-top: 10px}
 .com-info .sub-txt02{display: block;}
-.sub-txt .block{display: block;}
+footer .sub-txt-img{width: 53px; height: 69px;}
+footer .sub-txt-img img{width: 100%; margin-top: 10px;}
+.f-wrap .cs-center .sub-txt .sub-txt-a{margin-top: 10px;}
+.f-wrap .cs-center .sub-txt .sub-txt-a p a{color: #828282;}
+
+.f-wrap .bank-info .sub-txt p{margin: 40px 0 0 15px;}
+.f-wrap .bank-info .sub-txt span{display: block;}
+.f-wrap .bank-info .sub-txt{display: flex;}
+
+.f-wrap .offer .sub-txt span{display: block;}
+.f-wrap .com-info .sub-txt02 span{display: block;}
+
+
+.f-wrap > div{margin-bottom: 20px;}
+
+
 
 
 @media screen and (min-width: 1024px) {
@@ -232,6 +248,8 @@ footer .f-wrap{padding: 50px 0 20px;}
 
   /*gift*/
   #gift .gift-swiper img{width: 100%; height: 695px; object-fit: cover;}
+  
+  footer{height: 550px;}
 }
 
 
@@ -309,5 +327,29 @@ footer .f-wrap{padding: 50px 0 20px;}
   #gift .gift-swiper .swiper-wrapper .swiper-slide .g-img img{width: 1200px; height: 800px;}
   #gift .gift-swiper .swiper-wrapper .swiper-slide .g-img{position: absolute; bottom: 0; right: 0;}
 
+  footer{height: 510px;}
+  footer .inner{padding: 300px 50px 0; display: flex;}
+  footer h2{width: 150px; height: 102px;}
+  footer .f-wrap{display: flex; padding-top: 0;}
+  footer .txt-bold{font-size: 17px; margin-bottom: 8px;}
+  footer span, footer p{font-size: 14px;}
+  .f-wrap > div{margin-bottom: 0; margin-left: 50px;}
 
+.com-info .sub-txt02{display: block;}
+footer .sub-txt-img{width: 53px; height: 69px;}
+footer .sub-txt-img img{width: 100%; margin-top: 10px;}
+.f-wrap .cs-center .sub-txt .sub-txt-a{margin-top: 10px;}
+.f-wrap .cs-center .sub-txt .sub-txt-a p a{color: #828282;}
+
+.f-wrap .bank-info .sub-txt p{margin: 40px 0 0 15px;}
+.f-wrap .bank-info .sub-txt span{display: block;}
+.f-wrap .bank-info .sub-txt{display: flex;}
+
+.f-wrap .offer .sub-txt span{display: block;}
+.f-wrap .com-info .sub-txt02 span{display: block;}
+
+
+
+
+  
 }
