@@ -335,21 +335,16 @@ footer .sub-txt-img img{width: 100%; margin-top: 10px;}
   footer span, footer p{font-size: 14px;}
   .f-wrap > div{margin-bottom: 0; margin-left: 50px;}
 
-.com-info .sub-txt02{display: block;}
-footer .sub-txt-img{width: 53px; height: 69px;}
-footer .sub-txt-img img{width: 100%; margin-top: 10px;}
-.f-wrap .cs-center .sub-txt .sub-txt-a{margin-top: 10px;}
-.f-wrap .cs-center .sub-txt .sub-txt-a p a{color: #828282;}
+  .com-info .sub-txt02{display: block;}
+  footer .sub-txt-img{width: 53px; height: 69px;}
+  footer .sub-txt-img img{width: 100%; margin-top: 10px;}
+  .f-wrap .cs-center .sub-txt .sub-txt-a{margin-top: 10px;}
+  .f-wrap .cs-center .sub-txt .sub-txt-a p a{color: #828282;}
 
-.f-wrap .bank-info .sub-txt p{margin: 40px 0 0 15px;}
-.f-wrap .bank-info .sub-txt span{display: block;}
-.f-wrap .bank-info .sub-txt{display: flex;}
+  .f-wrap .bank-info .sub-txt p{margin: 40px 0 0 15px;}
+  .f-wrap .bank-info .sub-txt span{display: block;}
+  .f-wrap .bank-info .sub-txt{display: flex;}
 
-.f-wrap .offer .sub-txt span{display: block;}
-.f-wrap .com-info .sub-txt02 span{display: block;}
-
-
-
-
-  
+  .f-wrap .offer .sub-txt span{display: block;}
+  .f-wrap .com-info .sub-txt02 span{display: block;}
 }
