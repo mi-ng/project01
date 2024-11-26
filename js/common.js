@@ -2,7 +2,7 @@ $(document).ready(function() { //start
 
   $(window).resize(function(){
 
-    if($(window).width() < 700) {
+    if($(window).width() < 1024){
       $(".eng").hide();
       $(".q-menu .lang").mouseenter(function(){
         $(".q-menu .lang .eng").stop().slideDown();
@@ -12,9 +12,10 @@ $(document).ready(function() { //start
       });//한글 영어 선택
 
       }else{
-        $(".eng").show();
-        $(".q-menu .lang").off();
-
+        if($(window).width() > 1024){
+          $(".eng").show();
+          $(".q-menu .lang").off();
+        }
       }
   });
 
@@ -25,23 +26,47 @@ $(document).ready(function() { //start
   $(".gnb").hide();
   $(".dim").hide();
 
+
+  $(function(){
+    var $header = $("header");
+    var $page = $(".change");
+    var $window = $(window);
+    var pageOffsetTop = $page.offset().top;
+    
+    $(window).resize(function(){
+      pageOffsetTop = $page.offset().top;
+    });
+    
+    $(window).on("scroll", function(){ 
+      var scrolled = $window.scrollTop() >= pageOffsetTop;
+      $header.toggleClass("black", scrolled);
+    });
+  });//header 색상 변환
+
+
   $(".ham").click(function(){
     $(".dim").fadeIn();
     $(".gnb").show();
     $(this).hide();
     $(".menu-close").show();
+    $('body').css({overflow:'hidden'});
   });//메뉴열기
 
-  $(".depth1").click(function(){
-    $(".depth2").stop().slideUp();
-    $(this).children(".depth2").slideDown();
-  });//리스트클릭
+  $(".gnb > li a").click(function(){
+    var submenu = $(this).next("ul");
+    if(submenu.is(":visible")){
+      submenu.slideUp();
+    }else{
+      submenu.slideDown();
+    }
+  });//submenu click  
 
   $(".menu-close").click(function(){
     $(".dim").fadeOut();
     $(".gnb").hide();
     $(this).hide();
     $(".ham").show();
+    $('body').css({overflow:'visible'});
   });//메뉴닫기
 
 
