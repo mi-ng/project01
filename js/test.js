@@ -84,15 +84,50 @@ $(document).ready(function() { //start
     $(".search").show();
   });
 
-  $(window).resize(function(){
-    if($(window).width() > 700) {
-      $(".eng").show();
-      
-    
-      } else {
-       
-      }
-  });
+  gsap.registerPlugin(ScrollTrigger);
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".transition",
+        pin: true,
+        start: "#prologue",
+        end: "+=200%",
+        scrub: 1,
+      },
+      defaults: {
+        ease: "none",
+      },
+    })
+    .to(
+      ".upper-container h2",
+      {
+        scale: 5,
+      },
+      "start"
+    )
+    .to(
+      ".upper-container h2",
+      {
+        opacity: 0,
+      },
+      "start"
+    )
+    .to(
+      ".lower-container",
+      {
+        delay: 0.1,
+        scale: 2,
+      },
+      "start"
+    )
+    .to(
+      ".lower-container",
+      {
+        delay: 0,
+        opacity: 1,
+      },
+      "start"
+    );
 
   
   var swiper = new Swiper(".mySwiper", {
@@ -140,50 +175,5 @@ $(document).ready(function() { //start
       prevEl: ".swiper-button-prev",
     },
   });
-
-  gsap.registerPlugin(ScrollTrigger);
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".transition",
-        pin: true,
-        start: "#prologue",
-        end: "+=200%",
-        scrub: 1,
-      },
-      defaults: {
-        ease: "none",
-      },
-    })
-    .to(
-      ".upper-container h2",
-      {
-        scale: 5,
-      },
-      "start"
-    )
-    .to(
-      ".upper-container h2",
-      {
-        opacity: 0,
-      },
-      "start"
-    )
-    .to(
-      ".lower-container",
-      {
-        delay: 0.1,
-        scale: 2,
-      },
-      "start"
-    )
-    .to(
-      ".lower-container",
-      {
-        delay: 0,
-        opacity: 1,
-      },
-      "start"
-    ); //prologue 스크롤 코드
   
 });//end
